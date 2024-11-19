@@ -20,7 +20,7 @@
 			header {
 				background-color: #face06;
 				color: white;
-				padding: 20px 10px;
+				padding: 20px 10px 40px;
 				text-align: center;
 				position: relative;
 				box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -32,26 +32,6 @@
 			}
 			header img:hover {
 				transform: scale(1.2);
-			}
-			.social-links {
-				margin-top: 20px;
-				text-align: center;
-			}
-			.social-links a {
-				display: inline-flex;
-				align-items: center;
-				margin: 0 15px;
-				color: #4e2219;
-				text-decoration: none;
-				font-size: 1.2rem; /* Dimensione del testo vicino all'icona */
-				transition: color 0.3s ease;
-			}
-			.social-links a i {
-				font-size: 2rem; /* Dimensione delle icone */
-				margin-right: 10px; /* Spazio tra l'icona e il testo */
-			}
-			.social-links a:hover {
-				color: #d0181f;
 			}
 			.content {
 				padding: 20px;
@@ -75,24 +55,67 @@
 			p {
 				line-height: 1.6;
 			}
+			.crowdfunding {
+				display: none;
+				background-color: #fff;
+				border-radius: 10px;
+				padding: 20px;
+				box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+				animation: fadeIn 1s ease-out forwards;
+				border-left: 5px solid #f88d27;
+			}
+			.cta-button {
+				display: inline-block;
+				padding: 15px 30px;
+				background-color: #f88d27;
+				color: white;
+				border-radius: 10px;
+				font-size: 1.2rem;
+				font-weight: bold;
+				text-decoration: none;
+				margin: 20px auto;
+				cursor: pointer;
+				transition: all 0.4s ease;
+			}
+			.cta-button:hover {
+				background-color: #face06;
+				color: #4e2219;
+				transform: scale(1.1) rotate(-2deg);
+			}
 			footer {
 				background-color: #f88d27;
 				color: #4e2219;
 				text-align: center;
-				padding: 10px 0;
+				padding: 20px 10px;
 			}
-			footer a {
+			footer .social-links {
+				margin-top: 10px;
+			}
+			footer .social-links a {
+				display: inline-flex;
+				align-items: center;
+				margin: 0 15px;
 				color: #4e2219;
 				text-decoration: none;
 				font-size: 1.2rem;
-				margin: 0 10px;
+				transition: color 0.3s ease;
 			}
-			footer a i {
-				font-size: 2rem; /* Aumentata dimensione icona nel footer */
-				margin-right: 8px;
+			footer .social-links a i {
+				font-size: 2rem; /* Dimensione delle icone */
+				margin-right: 10px;
 			}
-			footer a:hover {
+			footer .social-links a:hover {
 				color: #d0181f;
+			}
+			@keyframes fadeIn {
+				from {
+					opacity: 0;
+					transform: translateY(20px);
+				}
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
 			}
 		</style>
 	</head>
@@ -103,22 +126,6 @@
 				alt="Logo Il Re Leone"
 			/>
 			<h1>Il Re Leone - Musical</h1>
-			<div class="social-links">
-				<a
-					href="https://www.instagram.com/ilreleone.cdc/"
-					target="_blank"
-					aria-label="Instagram"
-				>
-					<i class="fab fa-instagram"></i> ilreleone.cdc
-				</a>
-				<a
-					href="https://www.threads.net/@ilreleone.cdc/"
-					target="_blank"
-					aria-label="Threads"
-				>
-					<i class="fab fa-twitter"></i> ilreleone.cdc
-				</a>
-			</div>
 		</header>
 		<div class="content">
 			<div class="section">
@@ -154,20 +161,22 @@
 				&copy; 2024 Il Re Leone - Oratorio PerDiQua. Tutti i diritti
 				riservati.
 			</p>
-			<a
-				href="https://www.instagram.com/ilreleone.cdc/"
-				target="_blank"
-				aria-label="Instagram"
-			>
-				<i class="fab fa-instagram"></i> ilreleone.cdc
-			</a>
-			<a
-				href="https://www.threads.net/@ilreleone.cdc/"
-				target="_blank"
-				aria-label="Threads"
-			>
-				<i class="fab fa-twitter"></i> ilreleone.cdc
-			</a>
+			<div class="social-links">
+				<a
+					href="https://www.instagram.com/ilreleone.cdc/"
+					target="_blank"
+					aria-label="Instagram"
+				>
+					<i class="fab fa-instagram"></i> ilreleone.cdc
+				</a>
+				<a
+					href="https://www.threads.net/@ilreleone.cdc/"
+					target="_blank"
+					aria-label="Threads"
+				>
+					<i class="fab fa-twitter"></i> ilreleone.cdc
+				</a>
+			</div>
 		</footer>
 		<script>
 			function showCrowdfunding() {
